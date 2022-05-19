@@ -9,7 +9,9 @@ import NotFound from "./pages/NotFound"
 import DrinkBuilder from "./pages/DrinkBuilder";
 import DrinkDetails from "./pages/DrinkDetails";
 import UserProfile from "./pages/UserProfile";
-import UserDetails from "./pages/UserDetails"; 
+import UserDetails from "./pages/UserDetails";
+import EditDrink from "./pages/EditDrink"; 
+import SeeDrink from "./pages/SeeDrink"; 
 
 import NavBar from "./components/NavBar"; 
 
@@ -37,6 +39,8 @@ function App() {
         <Route path='/user-details' element={<UserDetails/>}/>
         <Route path='/drink-builder' element={<DrinkBuilder/>}/>
         <Route path='/create-drink/:isHot/:id' element={<DrinkDetails/>}/>
+        <Route path='/edit-drink/:id' element={<EditDrink/>}/>
+        <Route path='/see-drink/:id' element={<SeeDrink/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </div>

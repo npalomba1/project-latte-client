@@ -3,6 +3,7 @@ import React from "react";
 import axios from "axios";
 import { baseUrl } from "../authService/baseUrl";
 import { get } from "../authService/authService";
+import { Link } from "react-router-dom";
 
 // baseUrl = baseUrl + "/users/user-home"
 // baseUrl = get(`/users/user-home`)
@@ -60,7 +61,8 @@ const UserProfile = () => {
                     return (
                         <div className="user-drink">
                             <h5>{drink.name} | <em>{drink.title}</em></h5>
-                            <p>see drink</p>
+                            <Link to={`/see-drink/${drink._id}`}>See Drink</Link>
+                            <Link to={`/edit-drink/${drink._id}`}>Edit drink</Link>
                         </div>
                     )
                 })}

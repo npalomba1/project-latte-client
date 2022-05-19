@@ -6,7 +6,7 @@ export const get = (route) => {
    
    let token = localStorage.getItem("authToken")
     
-   return axios.get(baseUrl + route, { headers: { Authorization: `Bearer ${token}`} })
+   return axios.get(baseUrl + route, { headers: { Authorization: `Bearer ${token}`} }, console.log('ENV', process.env))
     
 }
 
