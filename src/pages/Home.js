@@ -1,5 +1,6 @@
 import React from "react"; 
 import {get} from "../authService/authService"; 
+import { Routes, Route, Link } from "react-router-dom";  
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
     }, [])
     return (
         <div>
-            <h1>This is Home</h1>
+            <h1>Welcome to CaffeIndex</h1>
         </div>
     )
 }

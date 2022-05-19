@@ -2,11 +2,13 @@ import React from "react";
 // import axios from "axios";
 import { post } from "../authService/authService"
 import { useNavigate } from "react-router-dom"; 
+// import { post} from "../authService/authService"; 
 
 const Signup = () => {
 
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
+    const [image, setImage] = React.useState('');
     // const [statusMessage, setStatusMessage] = React.useState('')
 
     const navigate = useNavigate()
@@ -19,12 +21,13 @@ const Signup = () => {
         e.preventDefault();
         post("/users/signup", {
             username: username,
-            password: password
+            password: password,
+            profileImage: image
         })
         .then((results)=>{
             console.log("results", results.data.token)
             localStorage.setItem("authToken", results.data.token)
-            navigate("/")
+            navigate("/user-profile")
         })
         .catch((err)=>{
             console.log("Error occurred", err.message); 
@@ -38,6 +41,21 @@ const Signup = () => {
     //         setErrorMessage("user")
     //     }
     // }
+    const handleFileUpload = (e) =>{
+        //create FormData
+        const uploadData = new FormData()
+
+        uploadData.append("imageUrl", e.target.files[0])
+
+        post("/users/signup-image", uploadData)
+        .then((results)=>{
+            console.log("results", results.data)
+            setImage(results.data)
+        })
+        .catch((err)=>{
+            console.log("error", err.message); 
+        })
+    }
 
 
     return (
@@ -49,6 +67,8 @@ const Signup = () => {
                     <input value={username} onChange={(e)=>setUsername(e.target.value)}/>
                     <label>Password</label>
                     <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                    <label>Profile Picture</label>
+                    <input type="file" onChange={(e)=>handleFileUpload(e)}/>
 
                     <button type="submit">Sign up</button>
 
