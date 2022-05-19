@@ -17,8 +17,9 @@ const NavBar = () =>{
     <div>
         {token ? (
         <nav>
-          <Link to="/">Home</Link>
+          <Link to="/user-profile">Home</Link>
           <Link to="/drink-builder">Drink Builder</Link>
+          <Link to="/user-details">Account Details</Link>
           <button onClick={logout}>Log out</button>
           {/* <Link to="/login">Login</Link> */}
         </nav>

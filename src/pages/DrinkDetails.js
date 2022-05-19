@@ -50,7 +50,7 @@ const DrinkDetails = () =>{
           })
           .then((results)=>{
               console.log("results", results.data)
-              navigate("/");
+              navigate("/user-profile");
           })
           .catch((err)=>{
               console.log("Error occurred creating drink", err.message)

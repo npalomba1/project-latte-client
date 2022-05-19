@@ -69,7 +69,6 @@ const Signup = () => {
                     <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                     <label>Profile Picture</label>
                     <input type="file" onChange={(e)=>handleFileUpload(e)}/>
-
                     <button type="submit">Sign up</button>
 
 

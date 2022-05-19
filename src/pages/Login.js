@@ -34,7 +34,7 @@ const Login = () => {
                 <label>Username</label>
                 <input onChange={(e)=>setUsername(e.target.value)} value={username}/>
                 <label>Password</label>
-                <input onChange={(e)=>setPassword(e.target.value)} value={password}/>
+                <input onChange={(e)=>setPassword(e.target.value)} value={password} type="password"/>
 
                 <button type="submit">Log in</button>
             </form>

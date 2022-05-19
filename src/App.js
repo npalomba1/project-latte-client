@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound"
 import DrinkBuilder from "./pages/DrinkBuilder";
 import DrinkDetails from "./pages/DrinkDetails";
 import UserProfile from "./pages/UserProfile";
+import UserDetails from "./pages/UserDetails"; 
 
 import NavBar from "./components/NavBar"; 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/user-profile' element={<UserProfile/>}/>
+        <Route path='/user-details' element={<UserDetails/>}/>
         <Route path='/drink-builder' element={<DrinkBuilder/>}/>
         <Route path='/create-drink/:isHot/:id' element={<DrinkDetails/>}/>
         <Route path='*' element={<NotFound/>}/>
