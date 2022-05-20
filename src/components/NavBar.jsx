@@ -14,14 +14,15 @@ const NavBar = () =>{
     }
 
     return (
-    <div>
+    <div className="navbar">
+        <img src="cup.png" alt="spilled coffee" />
         {token ? (
         <nav>
           <Link to="/user-profile">Home</Link>
           <Link to="/drink-builder">Drink Builder</Link>
           <Link to="/user-details">Account Details</Link>
-          <button onClick={logout}>Log out</button>
           {/* <Link to="/login">Login</Link> */}
+          <button onClick={logout}>Log out</button>
         </nav>
          ) : (
         <nav>

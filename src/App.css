@@ -36,3 +36,94 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  /* background-image: url("../public/caffeindex-background.png"); */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  background-color: #92D293;
+  font-family: 'Chelsea Market';
+  font-size: 1.5em;
+}
+
+img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+
+}
+
+header {
+  
+  background-color: #FFFDD0;;
+  margin-top: 80px;
+}
+
+.user-profile-header {
+  display: flex;
+}
+
+.user-profile-header > h2 {
+  padding: 5%;
+
+}
+
+.drinks-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.user-drink {
+  /* border: 1px solid black; */
+  height: 200px;
+  width: 300px;
+  background-color: #FFFDD0;
+  font-size: large;
+  text-align: center;
+  margin: 2% 0;
+  border-radius: 10%;
+}
+
+.user-drink > a {
+  /* margin-left: 5%; */
+  /* text-align: center; */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #92D293;
+  /* background-color: #333; */
+  position: fixed; 
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  right: 0;
+  width: 100%; /* Full width */
+  height: 60px;
+
+  
+}
+.navbar > img {
+  height: 60px;
+  width: 60px;
+  margin-right: 3%;
+}
+
+.navbar > nav {
+  /* width: 70px; */
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.navbar > nav > a {
+  margin: 3% 2%;
+  display: inline;
+  white-space: nowrap;
+}
+
+button {
+  white-space: nowrap;
+}

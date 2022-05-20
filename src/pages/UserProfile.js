@@ -50,11 +50,11 @@ const UserProfile = () => {
 
     return (
         <div>
-            <header>
+            <header className="user-profile-header">
+                <img className="profile-pic" src={user.profileImage} alt="profile" />
                 <h2>Welcome back, {user.username}</h2>
-                <img src={user.profileImage} alt="profile" />
             </header>
-            <section>
+            <section className="drinks-list">
                 <h4>Your drinks</h4>
                 {drinks.map((drink) => {
 
