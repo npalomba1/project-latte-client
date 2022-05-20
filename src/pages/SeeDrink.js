@@ -31,7 +31,7 @@ const SeeDrink = () => {
                 setHasMilk(results.data.hasMilk);
                 setIsHot(results.data.hotOrIced);
                 setName(results.data.name);
-                setFlavor(results.data.flavor);
+                setFlavor(results.data.flavors);
                 setDescription(results.data.description);
                 setTitle(results.data.title)
                 setAlternativeMilk(results.data.alternativeMilks)

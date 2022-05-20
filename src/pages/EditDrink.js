@@ -45,8 +45,9 @@ const EditDrink = () => {
         setHasMilk(results.data.hasMilk);
         setIsHot(results.data.hotOrIced);
         setName(results.data.name);
-        setFlavor(results.data.flavor);
+        setFlavor(results.data.flavors);
         setDescription(results.data.description);
+        setAlternativeMilk(results.data.alternativeMilks);
       })
       .catch((error) => {
         console.log(

@@ -45,7 +45,7 @@ const DrinkDetails = () =>{
             hotOrIced: params.isHot,
             description: coffee.description,
             ingredients: coffee.ingredients,
-            flavor: flavor,
+            flavors: flavor,
             alternativeMilks: alternativeMilk
           })
           .then((results)=>{
