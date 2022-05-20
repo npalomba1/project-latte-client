@@ -16,6 +16,7 @@ const NavBar = () =>{
     return (
     <div className="navbar">
         <img src="cup.png" alt="spilled coffee" />
+        
         {token ? (
         <nav>
           <Link to="/user-profile">Home</Link>

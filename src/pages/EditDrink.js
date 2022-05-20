@@ -68,7 +68,7 @@ const EditDrink = () => {
       hasMilk: drink.hasMilk,
       description: description,
       ingredients: ingredients,
-      flavor: flavor,
+      flavors: flavor,
       alternativeMilks: alternativeMilk
     })
     .then((results)=>{
@@ -122,17 +122,17 @@ const deleteDrink = () =>{
   const altMilkHandleChange = (e) => {
     e.preventDefault();
     console.log(e.target.value)
-    setAlternativeMilk(alternativeMilk.concat(e.target.value));
+    setAlternativeMilk(e.target.value);
 
   };
   console.log(alternativeMilk)
 
 
   return (
-    <div>
+    <div className="full-drink-card">
       <h2>"{drink.name}"</h2>
 
-      <form>
+      <form className="drink-form-schema">
         <DropDown
           label="Hot or Iced?"
           value={isHot}
@@ -211,9 +211,7 @@ const deleteDrink = () =>{
         <label>Name this drink</label>
         <input value={name} onChange={(e) => setName(e.target.value)} />
         {/* <input type="submit" value="Build"/> */}
-        <button type="button" onClick={updateDrink}>
-          Update drink
-        </button>
+        <button type="button" onClick={updateDrink}>Update drink</button>
       </form>
         <button onClick={deleteDrink}>Delete drink</button>
       <Link to="/user-profile">Back home</Link>

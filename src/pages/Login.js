@@ -28,9 +28,9 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <h1>This is Login</h1>
-            <form onSubmit={loginAccount}>
+        <div >
+            <h1>Login</h1>
+            <form onSubmit={loginAccount} className="login">
                 <label>Username</label>
                 <input onChange={(e)=>setUsername(e.target.value)} value={username}/>
                 <label>Password</label>

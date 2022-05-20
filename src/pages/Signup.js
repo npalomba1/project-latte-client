@@ -60,9 +60,9 @@ const Signup = () => {
 
     return (
         <div>
-            <h1>This is Signup</h1>
-            <div className="signup-form">
-                <form onSubmit={register} method="post" action="/users/signup">
+            <h1>Signup</h1>
+            <div className="signup-form" >
+                <form onSubmit={register} method="post" action="/users/signup" class="login">
                     <label>Username</label>
                     <input value={username} onChange={(e)=>setUsername(e.target.value)}/>
                     <label>Password</label>

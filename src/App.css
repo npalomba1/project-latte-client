@@ -200,3 +200,45 @@ a:hover {
   align-items: center;
   /* border-radius: 10%; */
 }
+
+.full-drink-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.drink-form-schema {
+  display: flex;
+  flex-direction: column;
+  
+  /* border: 1px solid black; */
+  width: 60%;
+  margin: 1%;
+  padding: 2%;
+  background-color: #FFFDD0;
+}
+
+button {
+  background-color: coral; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 10%;
+
+
+}
+
+.login {
+  display: flex;
+  margin: 0 2%
+
+}
+
+.login > input {
+  margin-right: 2%;
+}

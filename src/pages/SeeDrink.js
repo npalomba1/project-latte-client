@@ -45,9 +45,9 @@ const SeeDrink = () => {
     }, []);
 
     return (
-        <div>
-            <div className="full-drink-card">
+        <div className="full-drink-card">
             <h2>{name}</h2>
+            <div className="drink-schema">
             <p>Type of Drink: {title}</p>
             <p>Hot or iced? {isHot}</p>
             <p>Description: {description}</p>
