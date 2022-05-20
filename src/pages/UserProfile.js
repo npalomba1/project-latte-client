@@ -61,8 +61,10 @@ const UserProfile = () => {
                     return (
                         <div className="user-drink">
                             <h5>{drink.name} | <em>{drink.title}</em></h5>
+                        
                             <Link to={`/see-drink/${drink._id}`}>See Drink</Link>
                             <Link to={`/edit-drink/${drink._id}`}>Edit drink</Link>
+                        
                         </div>
                     )
                 })}

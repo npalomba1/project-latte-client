@@ -61,11 +61,18 @@ header {
 
 .user-profile-header {
   display: flex;
+  justify-content: space-evenly;
+  
 }
 
 .user-profile-header > h2 {
   padding: 5%;
 
+
+}
+
+.profile-pic {
+  margin-top: 2%;
 }
 
 .drinks-list {
@@ -84,11 +91,17 @@ header {
   text-align: center;
   margin: 2% 0;
   border-radius: 10%;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .user-drink > a {
   /* margin-left: 5%; */
   /* text-align: center; */
+  margin: 2%;
+  font-size: 1.25rem;
 }
 
 .navbar {
@@ -126,4 +139,64 @@ header {
 
 button {
   white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white
+}
+
+.user-drink > a:hover {
+  color: black
+}
+
+.drink-builder-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drink-schema {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  width: 60%;
+  margin: 1%;
+  padding: 2%;
+  background-color: #FFFDD0;
+
+}
+
+.drink-schema > a:hover{
+  color: black;
+}
+
+.home-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-header {
+  background-color: #92D293;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-card {
+  width: 80%;
+  /* border: 1px solid black; */
+  background-color: #FFFDD0;
+  margin: 2% 0;
+  height: 300px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-radius: 10%; */
 }

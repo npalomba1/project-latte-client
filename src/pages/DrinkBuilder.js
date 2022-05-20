@@ -63,9 +63,11 @@ const DrinkBuilder = () => {
   };
 
   return (
-    <div>
+    <div className="drink-builder-page">
+
       <h2>Drink Builder</h2>
 
+      <div className="dropdown-forms">
       <DropDown
         label="Hot or Iced?"
         value={isHot}
@@ -100,11 +102,12 @@ const DrinkBuilder = () => {
           { label: "No Milk", value: " " },
         ]}
       />
+      </div>
 
 
       {drinks.map((coffee) => {
         return (
-          <div>
+          <div className="drink-schema">
             <h4>{coffee.title}</h4>
             <Link to={`/create-drink/${isHot}/${coffee.id}`}>Build</Link>
             <p>{coffee.description}</p>
