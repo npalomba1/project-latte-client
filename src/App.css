@@ -248,3 +248,15 @@ button {
 .login > input {
   margin-right: 2%;
 }
+
+.dropdown-forms {
+  display: flex;
+  margin: 0 2%;
+  display: inline;
+}
+
+.dropdown-forms > label {
+  margin-right: 2%;
+  
+
+}
