@@ -59,7 +59,6 @@ const DrinkBuilder = () => {
       });
     }
     setDrinks(filteredDrinksArr);
-    console.log(filteredDrinksArr);
   };
 
   return (

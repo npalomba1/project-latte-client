@@ -48,8 +48,7 @@ const DrinkDetails = () =>{
             flavors: flavor,
             alternativeMilks: alternativeMilk
           })
-          .then((results)=>{
-              console.log("results", results.data)
+          .then(()=>{
               navigate("/user-profile");
           })
           .catch((err)=>{
