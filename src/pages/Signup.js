@@ -9,6 +9,7 @@ const Signup = () => {
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [image, setImage] = React.useState('');
+    const [statusMessage, setStatusMessage] = React.useState('')
     // const [statusMessage, setStatusMessage] = React.useState('')
 
     const navigate = useNavigate()
@@ -17,8 +18,11 @@ const Signup = () => {
 
     //axios call to backend 
     const register = (e) => {
-        console.log("signup", username, password); 
+        // console.log("signup", username, password); 
         e.preventDefault();
+        
+        checkFields(e);
+
         post("/users/signup", {
             username: username,
             password: password,
@@ -34,13 +38,18 @@ const Signup = () => {
         })
     }
 
-    // const checkFields = (e) => {
-    //     e.preventDefault();
+    const checkFields = (e) => {
+        e.preventDefault();
 
-    //     if (username.length < 4){
-    //         setErrorMessage("user")
-    //     }
-    // }
+        if (username.length < 4){
+            setStatusMessage("username must be at least 4 characters")
+        } else if (password.length < 6) {
+            setStatusMessage("Password must be at least 6 characters")
+        } else if (password === 'password') {
+            setStatusMessage(`You can't call the password "password"`)
+        }
+    }
+
     const handleFileUpload = (e) =>{
         //create FormData
         const uploadData = new FormData()
@@ -74,6 +83,8 @@ const Signup = () => {
 
 
                 </form>
+
+                <p>{statusMessage}</p>
 
             </div>
         </div>
