@@ -29,7 +29,7 @@ const Signup = () => {
             profileImage: image
         })
         .then((results)=>{
-            console.log("results", results.data.token)
+            // console.log("results", results.data.token)
             localStorage.setItem("authToken", results.data.token)
             navigate("/user-profile")
         })
