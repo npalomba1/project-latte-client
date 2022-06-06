@@ -5,11 +5,14 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
+    const [statusMessage, setStatusMessage] = React.useState('')
 
     const navigate = useNavigate(); 
 
     const loginAccount = (e) =>{
         e.preventDefault(); 
+
+        
 
         post("/users/login", {
             username: username,
@@ -20,11 +23,23 @@ const Login = () => {
             navigate("/user-profile"); 
         })
         .catch((err)=>{
-            console.log("something went wrong", err.message)
+            setStatusMessage('username or password incorrect')
         })
 
+        checkFields(e)
+    }
 
+    const checkFields = (e) => {
+        e.preventDefault();
 
+        if (username.length === 0){
+            setStatusMessage("username or password required")
+        } else if (password.length === 0) {
+            setStatusMessage("username or password required")
+        } else if (password === 'password') {
+            setStatusMessage(`You can't call the password "password"`)
+        
+        }
     }
 
     return (
@@ -38,6 +53,7 @@ const Login = () => {
 
                 <button type="submit">Log in</button>
             </form>
+            <p>{statusMessage}</p>
         </div>
     )
 }
