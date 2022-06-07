@@ -13,12 +13,7 @@ const UserProfile = () => {
   const [drinks, setDrinks] = React.useState([]);
   // const baseUrl = baseUrl;
 
-  // React.useEffect(()=>{
-  //     axios
-  //     .get(`http://localhost:5001/users/user-home`)
-  //     .then((results)=>setUser(results.data))
-  //     .catch((err)=>console.log("something went wrong", err.message))
-  // }, [])
+ 
 
   //GET USER PROFILE INFORMATION
   React.useEffect(() => {
