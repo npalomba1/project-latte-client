@@ -25,7 +25,7 @@ const SeeDrink = () => {
     React.useEffect(() => {
         get(`/drink/${params.id}/update-drink`)
             .then((results) => {
-                // console.log("drink", results.data);
+                
                 setDrink(results.data);
                 setIngredients(results.data.ingredients);
                 setHasMilk(results.data.hasMilk);
