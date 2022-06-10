@@ -11,7 +11,7 @@ const SeeDrink = () => {
     const [isHot, setIsHot] = React.useState("");
     // const [hasEspresso, setHasEspresso] = React.useState("");
     const [hasMilk, setHasMilk] = React.useState("");
-    // const [ingredients, setIngredients] = React.useState([]);
+    const [ingredients, setIngredients] = React.useState([]);
     const [alternativeMilk, setAlternativeMilk] = React.useState('');
     const [name, setName] = React.useState("");
     const [flavor, setFlavor] = React.useState("");
