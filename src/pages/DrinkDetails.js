@@ -48,7 +48,7 @@ const DrinkDetails = () =>{
             flavors: flavor,
             alternativeMilks: alternativeMilk
           })
-          .then(()=>{
+          .then((results)=>{
               navigate("/user-profile");
           })
           .catch((err)=>{

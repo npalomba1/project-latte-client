@@ -16,13 +16,14 @@ const DrinkBuilder = () => {
     axios
       .get(`https://api.sampleapis.com/coffee/${isHot}`)
       .then((results) => {
+        console.log('THE RESULTS', results.data)
         setDrinks(results.data);
         setFullDrinkList(results.data);
       })
       .catch((error) => {
         console.log(error.message);
       });
-  }, [isHot]);
+  }, [isHot]);//add isHot again 
 
   React.useEffect(() => {
     filterDrinks();

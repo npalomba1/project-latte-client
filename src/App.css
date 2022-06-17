@@ -240,7 +240,7 @@ button {
 }
 
 .login {
-  display: flex;
+  /* display: flex; */
   margin: 0 2%
 
 }
