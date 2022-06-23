@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import DropDown from "../components/DropDown";
 import { Link } from "react-router-dom";
+import { get } from "../authService/authService"
 
 const DrinkBuilder = () => {
   const [isHot, setIsHot] = React.useState("");
@@ -12,7 +13,8 @@ const DrinkBuilder = () => {
 
   //use effect axios call for my backend
 
-  React.useEffect(() => {
+  //old use effect using third party api
+  React.useEffect(() => { 
     axios
       .get(`https://api.sampleapis.com/coffee/${isHot}`)
       .then((results) => {
@@ -24,6 +26,19 @@ const DrinkBuilder = () => {
         console.log(error.message);
       });
   }, [isHot]);//add isHot again 
+
+//new use effect using seed data
+// React.useEffect(()=>{
+//   get("drink/drink-types")
+//   .then((results) => {
+//     console.log("THE RESULTS", results.data);
+//     setDrinks(results.data);
+//     setFullDrinkList(results.data);
+//   })
+//   .catch((error)=>{
+//     console.log(error.message);
+//   })
+// }, []); 
 
   React.useEffect(() => {
     filterDrinks();
