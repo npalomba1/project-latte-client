@@ -38,7 +38,7 @@ const DrinkBuilder = () => {
 //   .catch((error)=>{
 //     console.log(error.message);
 //   })
-// }, []); 
+// }, []); trying to fix this
 
   React.useEffect(() => {
     filterDrinks();
