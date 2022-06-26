@@ -14,31 +14,31 @@ const DrinkBuilder = () => {
   //use effect axios call for my backend
 
   //old use effect using third party api
-  React.useEffect(() => { 
-    axios
-      .get(`https://api.sampleapis.com/coffee/${isHot}`)
-      .then((results) => {
-        console.log('THE RESULTS', results.data)
-        setDrinks(results.data);
-        setFullDrinkList(results.data);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  }, [isHot]);//add isHot again 
+  // React.useEffect(() => { 
+  //   axios
+  //     .get(`https://api.sampleapis.com/coffee/${isHot}`)
+  //     .then((results) => {
+  //       console.log('THE RESULTS', results.data)
+  //       setDrinks(results.data);
+  //       setFullDrinkList(results.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error.message);
+  //     });
+  // }, [isHot] );//add isHot again 
 
 //new use effect using seed data
-// React.useEffect(()=>{
-//   get("drink/drink-types")
-//   .then((results) => {
-//     console.log("THE RESULTS", results.data);
-//     setDrinks(results.data);
-//     setFullDrinkList(results.data);
-//   })
-//   .catch((error)=>{
-//     console.log(error.message);
-//   })
-// }, []); trying to fix this
+React.useEffect(()=>{
+  get("/drink/drink-types")
+  .then((results) => {
+    console.log("THE RESULTS", results.data);
+    setDrinks(results.data);
+    setFullDrinkList(results.data);
+  })
+  .catch((error)=>{
+    console.log(error.message);
+  })
+}, []); // trying to fix this
 
   React.useEffect(() => {
     filterDrinks();
