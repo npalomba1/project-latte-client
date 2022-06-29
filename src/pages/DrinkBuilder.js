@@ -42,7 +42,7 @@ React.useEffect(()=>{
 
   React.useEffect(() => {
     filterDrinks();
-  }, [hasEspresso, hasMilk]);
+  }, [isHot, hasEspresso, hasMilk]);
 
   const hotHandleChange = (e) => {
     e.preventDefault();
@@ -66,14 +66,20 @@ React.useEffect(()=>{
   };
 
   const filterDrinks = () => {
-    let filteredDrinksArr = fullDrinkList.filter((drink) => { //start rearranging function here please 
-      return drink.ingredients.includes(hasEspresso);
+    let filteredDrinksArr = fullDrinkList.filter((drink) => { //will check for temperature, espresso/no espresso, and milk in descending order and filter through the seed data. 
+      return drink.hotOrIced.includes(isHot);
     });
+    if (hasEspresso) {
+      filteredDrinksArr = filteredDrinksArr.filter((drink) => {
+        return drink.ingredients.includes(hasEspresso);
+      });
+    }
     if (hasMilk) {
       filteredDrinksArr = filteredDrinksArr.filter((drink) => {
         return drink.ingredients.includes(hasMilk);
       });
     }
+
     setDrinks(filteredDrinksArr);
   };
 
