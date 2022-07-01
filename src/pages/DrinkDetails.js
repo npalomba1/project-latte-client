@@ -17,7 +17,7 @@ const DrinkDetails = () =>{
 
     React.useEffect(() => {
         axios
-          .get(`https://api.sampleapis.com/coffee/${params.isHot}/${params.id}`)
+          .get(`https://api.sampleapis.com/coffee/${params.isHot}/${params.id}`) //change useEffect to call on seed file data, move to server to either build new route or utilize existing route
           .then((results) => {
             setCoffee(results.data)
           })
